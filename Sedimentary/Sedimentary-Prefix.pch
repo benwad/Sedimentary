@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Sedimentary' target in the 'Sedimentary' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
