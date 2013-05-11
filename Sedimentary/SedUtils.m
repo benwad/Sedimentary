@@ -17,7 +17,7 @@
     [task setLaunchPath:@"/usr/bin/sed"];
     
     NSArray* arguments;
-    arguments = [NSArray arrayWithObjects: @"-n", pattern, nil];
+    arguments = [NSArray arrayWithObjects: pattern, nil];
     [task setArguments:arguments];
     
     NSFileHandle* inFile;

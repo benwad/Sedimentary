@@ -15,6 +15,8 @@
     NSString* notes;
 }
 
+- (id)initWithPattern:(NSString*)pattern flags:(NSString*)flags notes:(NSString*)notes;
+
 @property (nonatomic) NSString* pattern;
 @property (nonatomic) NSString* flags;
 @property (nonatomic) NSString* notes;

@@ -12,4 +12,17 @@
 
 @synthesize pattern, flags, notes;
 
+- (id)initWithPattern:(NSString*)pPattern flags:(NSString*)pFlags notes:(NSString*)pNotes
+{
+    self = [super init];
+    
+    if (self) {
+        self.pattern = pPattern;
+        self.flags = pFlags;
+        self.notes = pNotes;
+    }
+    
+    return self;
+}
+
 @end
