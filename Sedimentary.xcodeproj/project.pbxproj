@@ -13,6 +13,12 @@
 		C0FCF5A5173D6BC500BA7A52 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C0FCF5A3173D6BC500BA7A52 /* Credits.rtf */; };
 		C0FCF5A8173D6BC500BA7A52 /* BWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FCF5A7173D6BC500BA7A52 /* BWAppDelegate.m */; };
 		C0FCF5AB173D6BC600BA7A52 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FCF5A9173D6BC600BA7A52 /* MainMenu.xib */; };
+		C0FCF5B4173D6C1300BA7A52 /* SedimentaryMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FCF5B3173D6C1300BA7A52 /* SedimentaryMainWindowController.m */; };
+		C0FCF5B6173E62B200BA7A52 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FCF5B5173E62B200BA7A52 /* MainWindow.xib */; };
+		C0FCF5BA173E70FA00BA7A52 /* SedPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FCF5B9173E70FA00BA7A52 /* SedPattern.m */; };
+		C0FCF5BD173E71A500BA7A52 /* SedUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FCF5BC173E71A500BA7A52 /* SedUtils.m */; };
+		C0FCF5C1173E724D00BA7A52 /* sampleInFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = C0FCF5BF173E724D00BA7A52 /* sampleInFile.txt */; };
+		C0FCF5C2173E724D00BA7A52 /* sampleOutFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = C0FCF5C0173E724D00BA7A52 /* sampleOutFile.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,15 @@
 		C0FCF5A6173D6BC500BA7A52 /* BWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWAppDelegate.h; sourceTree = "<group>"; };
 		C0FCF5A7173D6BC500BA7A52 /* BWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWAppDelegate.m; sourceTree = "<group>"; };
 		C0FCF5AA173D6BC600BA7A52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C0FCF5B2173D6C1300BA7A52 /* SedimentaryMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SedimentaryMainWindowController.h; sourceTree = "<group>"; };
+		C0FCF5B3173D6C1300BA7A52 /* SedimentaryMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SedimentaryMainWindowController.m; sourceTree = "<group>"; };
+		C0FCF5B5173E62B200BA7A52 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		C0FCF5B8173E70FA00BA7A52 /* SedPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SedPattern.h; sourceTree = "<group>"; };
+		C0FCF5B9173E70FA00BA7A52 /* SedPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SedPattern.m; sourceTree = "<group>"; };
+		C0FCF5BB173E71A500BA7A52 /* SedUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SedUtils.h; sourceTree = "<group>"; };
+		C0FCF5BC173E71A500BA7A52 /* SedUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SedUtils.m; sourceTree = "<group>"; };
+		C0FCF5BF173E724D00BA7A52 /* sampleInFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleInFile.txt; sourceTree = SOURCE_ROOT; };
+		C0FCF5C0173E724D00BA7A52 /* sampleOutFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleOutFile.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +97,9 @@
 		C0FCF59A173D6BC500BA7A52 /* Sedimentary */ = {
 			isa = PBXGroup;
 			children = (
+				C0FCF5BE173E721E00BA7A52 /* Misc Files */,
+				C0FCF5B7173E70E200BA7A52 /* Classes */,
+				C0FCF5B1173D6BDB00BA7A52 /* Window Controllers */,
 				C0FCF5A6173D6BC500BA7A52 /* BWAppDelegate.h */,
 				C0FCF5A7173D6BC500BA7A52 /* BWAppDelegate.m */,
 				C0FCF5A9173D6BC600BA7A52 /* MainMenu.xib */,
@@ -100,6 +118,36 @@
 				C0FCF5A3173D6BC500BA7A52 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0FCF5B1173D6BDB00BA7A52 /* Window Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0FCF5B2173D6C1300BA7A52 /* SedimentaryMainWindowController.h */,
+				C0FCF5B3173D6C1300BA7A52 /* SedimentaryMainWindowController.m */,
+				C0FCF5B5173E62B200BA7A52 /* MainWindow.xib */,
+			);
+			name = "Window Controllers";
+			sourceTree = "<group>";
+		};
+		C0FCF5B7173E70E200BA7A52 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C0FCF5B8173E70FA00BA7A52 /* SedPattern.h */,
+				C0FCF5B9173E70FA00BA7A52 /* SedPattern.m */,
+				C0FCF5BB173E71A500BA7A52 /* SedUtils.h */,
+				C0FCF5BC173E71A500BA7A52 /* SedUtils.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C0FCF5BE173E721E00BA7A52 /* Misc Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0FCF5BF173E724D00BA7A52 /* sampleInFile.txt */,
+				C0FCF5C0173E724D00BA7A52 /* sampleOutFile.txt */,
+			);
+			name = "Misc Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +205,9 @@
 				C0FCF59F173D6BC500BA7A52 /* InfoPlist.strings in Resources */,
 				C0FCF5A5173D6BC500BA7A52 /* Credits.rtf in Resources */,
 				C0FCF5AB173D6BC600BA7A52 /* MainMenu.xib in Resources */,
+				C0FCF5B6173E62B200BA7A52 /* MainWindow.xib in Resources */,
+				C0FCF5C1173E724D00BA7A52 /* sampleInFile.txt in Resources */,
+				C0FCF5C2173E724D00BA7A52 /* sampleOutFile.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +220,9 @@
 			files = (
 				C0FCF5A1173D6BC500BA7A52 /* main.m in Sources */,
 				C0FCF5A8173D6BC500BA7A52 /* BWAppDelegate.m in Sources */,
+				C0FCF5B4173D6C1300BA7A52 /* SedimentaryMainWindowController.m in Sources */,
+				C0FCF5BA173E70FA00BA7A52 /* SedPattern.m in Sources */,
+				C0FCF5BD173E71A500BA7A52 /* SedUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

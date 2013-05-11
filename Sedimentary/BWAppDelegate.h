@@ -8,7 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "SedimentaryMainWindowController.h"
+
 @interface BWAppDelegate : NSObject <NSApplicationDelegate>
+{
+    SedimentaryMainWindowController* mainWindowController;
+}
 
 @property (assign) IBOutlet NSWindow *window;
 
