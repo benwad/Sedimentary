@@ -41,13 +41,6 @@
     
     [task launch];
     
-    NSData* data;
-    data = [outFile readDataToEndOfFile];
-    
-    NSString *string;
-    string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog (@"sed returned:\n%@", string);
-    
     return 0;
 }
 

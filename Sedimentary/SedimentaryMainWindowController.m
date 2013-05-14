@@ -43,6 +43,7 @@
     // Temporary input/output files
     fldInputFile.stringValue = @"/Users/wadben/Documents/Dev/Cocoa/Sedimentary/sampleInFile.txt";
     fldOutputFile.stringValue = @"/Users/wadben/Documents/Dev/Cocoa/Sedimentary/sampleOutFile.txt";
+//    btnRunQuery.enabled = NO;
 }
 
 - (SedPattern*)getPatternAtIndex:(NSInteger)i
@@ -87,6 +88,24 @@
     return YES;
 }
 
+- (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+//    NSLog(@"Got it!");
+    NSString* ident = [tableColumn identifier];
+    if ([ident isEqualToString:@"colPattern"]) {
+        [[self.patternArray objectAtIndex:row] setPattern:object];
+    }
+    else if ([ident isEqualToString:@"colFlags"]) {
+        [[self.patternArray objectAtIndex:row] setFlags:object];
+    }
+    else if ([ident isEqualToString:@"colNotes"]) {
+        [[self.patternArray objectAtIndex:row] setNotes:object];
+    }
+    else {
+        
+    }
+}
+
 #pragma mark - IBActions
 
 - (IBAction)btnRunQueryPressed:(id)sender
@@ -98,6 +117,25 @@
         SedPattern* pattern = [self.patternArray objectAtIndex:[tblPatterns selectedRow]];        
         [SedUtils DoSedWithPattern:pattern.pattern inFilePath:inputFile outFilePath:outputFile];
     }
+}
+
+- (IBAction)btnAddPressed:(id)sender
+{
+    SedPattern* newPattern = [[SedPattern alloc] initWithPattern:@"pattern" flags:@"flags" notes:@"notes"];
+    [self.patternArray addObject:newPattern];
+    [tblPatterns beginUpdates];
+    [tblPatterns insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:[self.patternArray count]] withAnimation:0];
+    [tblPatterns endUpdates];
+}
+
+- (IBAction)btnDeletePressed:(id)sender
+{
+    
+}
+
+- (IBAction)btnDuplicatePressed:(id)sender
+{
+    
 }
 
 @end

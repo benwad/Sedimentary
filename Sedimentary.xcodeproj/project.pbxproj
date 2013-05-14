@@ -19,6 +19,7 @@
 		C0FCF5BD173E71A500BA7A52 /* SedUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FCF5BC173E71A500BA7A52 /* SedUtils.m */; };
 		C0FCF5C1173E724D00BA7A52 /* sampleInFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = C0FCF5BF173E724D00BA7A52 /* sampleInFile.txt */; };
 		C0FCF5C2173E724D00BA7A52 /* sampleOutFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = C0FCF5C0173E724D00BA7A52 /* sampleOutFile.txt */; };
+		C0FCF5C51742E35E00BA7A52 /* BWFileUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FCF5C41742E35E00BA7A52 /* BWFileUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		C0FCF5BC173E71A500BA7A52 /* SedUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SedUtils.m; sourceTree = "<group>"; };
 		C0FCF5BF173E724D00BA7A52 /* sampleInFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleInFile.txt; sourceTree = SOURCE_ROOT; };
 		C0FCF5C0173E724D00BA7A52 /* sampleOutFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleOutFile.txt; sourceTree = SOURCE_ROOT; };
+		C0FCF5C31742E35E00BA7A52 /* BWFileUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWFileUtilities.h; sourceTree = "<group>"; };
+		C0FCF5C41742E35E00BA7A52 /* BWFileUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFileUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				C0FCF5B9173E70FA00BA7A52 /* SedPattern.m */,
 				C0FCF5BB173E71A500BA7A52 /* SedUtils.h */,
 				C0FCF5BC173E71A500BA7A52 /* SedUtils.m */,
+				C0FCF5C31742E35E00BA7A52 /* BWFileUtilities.h */,
+				C0FCF5C41742E35E00BA7A52 /* BWFileUtilities.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				C0FCF5B4173D6C1300BA7A52 /* SedimentaryMainWindowController.m in Sources */,
 				C0FCF5BA173E70FA00BA7A52 /* SedPattern.m in Sources */,
 				C0FCF5BD173E71A500BA7A52 /* SedUtils.m in Sources */,
+				C0FCF5C51742E35E00BA7A52 /* BWFileUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,9 @@
 - (NSUInteger)getNumPatterns;
 
 - (IBAction)btnRunQueryPressed:(id)sender;
+- (IBAction)btnAddPressed:(id)sender;
+- (IBAction)btnDeletePressed:(id)sender;
+- (IBAction)btnDuplicatePressed:(id)sender;
 
 @property (nonatomic) NSMutableArray* patternArray;
 
