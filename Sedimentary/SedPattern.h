@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SedPattern : NSObject
+@interface SedPattern : NSObject <NSCopying>
 {
     NSString* pattern;
     NSString* flags;

@@ -12,7 +12,7 @@
 
 @implementation BWFileUtilities
 
-+ (void)savePatterns:(NSArray*)patterns toCSVFile:(NSString*)filePath
++ (void)savePatterns:(NSArray*)patterns toJSONFile:(NSString*)filePath
 {
     NSMutableArray* patternDicts = [NSMutableArray arrayWithCapacity:[patterns count]];
     
@@ -33,9 +33,22 @@
     }
 }
 
-+ (NSArray*)loadPatternsFromCSVFile:(NSString*)filePath
++ (NSArray*)loadPatternsFromJSONFile:(NSString*)filePath
 {
-    return nil;
+    NSData* jsonData = [NSData dataWithContentsOfFile:filePath];
+    NSArray* patternsJson = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+    
+    NSMutableArray* patternObjects = [NSMutableArray arrayWithCapacity:[patternsJson count]];
+    
+    for (int i=0; i < [patternsJson count]; i++) {
+        NSDictionary* patternDict = [patternsJson objectAtIndex:i];
+        SedPattern* newPattern = [[SedPattern alloc] initWithPattern:[patternDict objectForKey:@"pattern"]
+                                                               flags:[patternDict objectForKey:@"flags"]
+                                                               notes:[patternDict objectForKey:@"notes"]];
+        [patternObjects addObject:newPattern];
+    }
+    
+    return [NSArray arrayWithArray:patternObjects];
 }
 
 @end

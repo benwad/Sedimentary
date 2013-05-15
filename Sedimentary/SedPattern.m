@@ -25,4 +25,12 @@
     return self;
 }
 
+#pragma mark - NSCopying methods
+- (id)copyWithZone:(NSZone*)zone
+{
+    SedPattern* myCopy = [[SedPattern alloc] initWithPattern:self.pattern flags:self.flags notes:self.notes];
+    
+    return myCopy;
+}
+
 @end

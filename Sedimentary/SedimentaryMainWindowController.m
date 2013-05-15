@@ -25,10 +25,6 @@
     if (self) {
         // Initialization code here.
         self.patternArray = [[NSMutableArray alloc] init];
-        
-        // Sample table data
-        SedPattern* firstPattern = [[SedPattern alloc] initWithPattern:@"s/life/lorf/g" flags:nil notes:@"Search for 'life', replace with 'lorf'"];
-        [self.patternArray addObject:firstPattern];
     }
     
     return self;
@@ -43,7 +39,6 @@
     // Temporary input/output files
     fldInputFile.stringValue = @"/Users/wadben/Documents/Dev/Cocoa/Sedimentary/sampleInFile.txt";
     fldOutputFile.stringValue = @"/Users/wadben/Documents/Dev/Cocoa/Sedimentary/sampleOutFile.txt";
-//    btnRunQuery.enabled = NO;
 }
 
 - (SedPattern*)getPatternAtIndex:(NSInteger)i
@@ -90,7 +85,6 @@
 
 - (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-//    NSLog(@"Got it!");
     NSString* ident = [tableColumn identifier];
     if ([ident isEqualToString:@"colPattern"]) {
         [[self.patternArray objectAtIndex:row] setPattern:object];
@@ -130,12 +124,17 @@
 
 - (IBAction)btnDeletePressed:(id)sender
 {
-    
+    NSInteger selectedRow = [tblPatterns selectedRow];
+    [self.patternArray removeObjectAtIndex:selectedRow];
+    [tblPatterns reloadData];
 }
 
 - (IBAction)btnDuplicatePressed:(id)sender
 {
-    
+    NSInteger selectedRow = [tblPatterns selectedRow];
+    SedPattern* duplicatePattern = [[self.patternArray objectAtIndex:selectedRow] copy];
+    [self.patternArray insertObject:duplicatePattern atIndex:selectedRow+1];
+    [tblPatterns reloadData];
 }
 
 @end

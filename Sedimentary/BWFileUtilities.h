@@ -10,7 +10,7 @@
 
 @interface BWFileUtilities : NSObject
 
-+ (void)savePatterns:(NSArray*)patterns toCSVFile:(NSString*)filePath;
-+ (NSArray*)loadPatternsFromCSVFile:(NSString*)filePath;
++ (void)savePatterns:(NSArray*)patterns toJSONFile:(NSString*)filePath;
++ (NSArray*)loadPatternsFromJSONFile:(NSString*)filePath;
 
 @end

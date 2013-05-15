@@ -17,6 +17,10 @@
     // Insert code here to initialize your application
 //    mainWindowController = [[SedimentaryMainWindowController alloc] initWithWindow:self.window];
     mainWindowController = [[SedimentaryMainWindowController alloc] initWithWindowNibName:@"MainWindow"];
+    
+    NSMutableString *filePath = [NSMutableString stringWithString:[[NSBundle mainBundle] resourcePath]];
+    [filePath appendString:@"/savedPatterns.txt"];
+    [mainWindowController.patternArray addObjectsFromArray:[BWFileUtilities loadPatternsFromJSONFile:filePath]];
     [mainWindowController showWindow:self];
 }
 
@@ -25,7 +29,7 @@
     NSMutableString *filePath = [NSMutableString stringWithString:[[NSBundle mainBundle] resourcePath]];
     [filePath appendString:@"/savedPatterns.txt"];
     
-    [BWFileUtilities savePatterns:mainWindowController.patternArray toCSVFile:filePath];
+    [BWFileUtilities savePatterns:mainWindowController.patternArray toJSONFile:filePath];
 }
 
 @end
